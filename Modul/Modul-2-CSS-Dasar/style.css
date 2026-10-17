@@ -18,8 +18,8 @@
    2. Pseudo-Element ::selection (Sesuai Materi Slide: Warna Blok Teks)
    -------------------------------------------------------------------------- */
 ::selection {
-  background-color: #000000;
-  color: #000000;
+  background-color: #2563eb;
+  color: #ffffff;
 }
 
 /* --------------------------------------------------------------------------
