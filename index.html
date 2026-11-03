@@ -1,133 +1,113 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth font-sans">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Web Portofolio Pribadi Muhammad Ihsan Malarangeng">
     <title>Muhammad Ihsan Malarangeng || Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            header: '#6c92c6',
-                            bg: '#101828',
-                            card: '#172338',
-                            border: '#22334e',
-                            accent: '#6c92c6',
-                            accentHover: '#8cb3eb'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Menghubungkan Lembar Gaya Eksternal (External CSS) -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#101828] text-white font-sans min-h-screen">
-    <!-- Header dengan warna #6c92c6 sesuai referensi -->
-    <header class="bg-[#6c92c6] sticky top-0 z-50 shadow-md">
-        <div class="max-w-[960px] mx-auto flex justify-between items-center py-4 px-6">
-            <a href="#home" class="font-bold text-lg text-white hover:text-blue-100 transition-colors">Muhammad Ihsan Malarangeng</a>
-            <nav class="flex gap-6 text-[0.95rem] text-white">
-                <a href="#home" class="hover:text-blue-100 transition-colors font-medium">Home</a>
-                <a href="#about" class="hover:text-blue-100 transition-colors font-medium">About</a>
-                <a href="#skills" class="hover:text-blue-100 transition-colors font-medium">Skills</a>
-                <a href="#projects" class="hover:text-blue-100 transition-colors font-medium">Projects</a>
-                <a href="#contact" class="hover:text-blue-100 transition-colors font-medium">Contact</a>
+<body>
+    <!-- Header dengan Navigasi Sticky -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Muhammad Ihsan Malarangeng</a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main class="max-w-[960px] mx-auto px-6">
+    <main class="main-container">
         <!-- Home / Hero Section -->
-        <section id="home" class="py-14 sm:py-16 flex flex-col sm:flex-row items-center gap-8 sm:gap-10">
-            <img src="assets/profile.jpg" alt="Muhammad Ihsan Malarangeng" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover shrink-0 shadow-lg border-4 border-[#6c92c6]/60">
-            <div class="flex flex-col text-center sm:text-left">
-                <p class="text-xs font-bold tracking-[0.08em] text-[#6c92c6] uppercase mb-2">Computer Engineering Student</p>
-                <h1 class="text-3xl sm:text-[2.6rem] font-bold text-white leading-tight mb-3">Muhammad Ihsan Malarangeng</h1>
-                <p class="text-base sm:text-lg text-gray-300 leading-relaxed font-semibold">Interested in web development and Gaming</p>
+        <section id="home" class="hero-section">
+            <img src="assets/profile.jpg" alt="Muhammad Ihsan Malarangeng" class="hero-avatar">
+            <div class="hero-info">
+                <p class="hero-kicker">Computer Engineering Student</p>
+                <h1 class="hero-name">Muhammad Ihsan Malarangeng</h1>
+                <p class="hero-tagline">Interested in web development and Gaming</p>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="border-t border-[#22334e] py-10 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 md:gap-10 scroll-mt-16">
-            <div>
-                <p class="text-xs font-bold tracking-[0.08em] text-[#6c92c6] uppercase">A little about me</p>
-                <h2 class="text-2xl font-bold text-white mt-1">About Me</h2>
+        <section id="about" class="section">
+            <div class="section-sidebar">
+                <p class="section-kicker">A little about me</p>
+                <h2 class="section-title">About Me</h2>
             </div>
-            <div class="text-gray-300 leading-relaxed space-y-3">
+            <div class="about-desc">
                 <p>Halo! Saya Muhammad Ihsan Malarangeng, mahasiswa Teknik Komputer yang suka nyoba nyoba hal baru terutama di bidang web development, ngeemel yuk.</p>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="border-t border-[#22334e] py-10 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 md:gap-10 scroll-mt-16">
-            <div>
-                <p class="text-xs font-bold tracking-[0.08em] text-[#6c92c6] uppercase">What I work with</p>
-                <h2 class="text-2xl font-bold text-white mt-1">Skills</h2>
+        <section id="skills" class="section">
+            <div class="section-sidebar">
+                <p class="section-kicker">What I work with</p>
+                <h2 class="section-title">Skills</h2>
             </div>
-            <div class="flex flex-wrap gap-2.5 items-center">
-                <span class="px-3.5 py-1.5 bg-[#172338] border border-[#22334e] rounded text-[0.95rem] text-gray-200 font-medium shadow-sm hover:border-[#6c92c6] hover:text-[#6c92c6] transition-colors">HTML</span>
-                <span class="px-3.5 py-1.5 bg-[#172338] border border-[#22334e] rounded text-[0.95rem] text-gray-200 font-medium shadow-sm hover:border-[#6c92c6] hover:text-[#6c92c6] transition-colors">CSS</span>
-                <span class="px-3.5 py-1.5 bg-[#172338] border border-[#22334e] rounded text-[0.95rem] text-gray-200 font-medium shadow-sm hover:border-[#6c92c6] hover:text-[#6c92c6] transition-colors">JavaScript</span>
-                <span class="px-3.5 py-1.5 bg-[#172338] border border-[#22334e] rounded text-[0.95rem] text-gray-200 font-medium shadow-sm hover:border-[#6c92c6] hover:text-[#6c92c6] transition-colors">Python</span>
-                <span class="px-3.5 py-1.5 bg-[#172338] border border-[#22334e] rounded text-[0.95rem] text-gray-200 font-medium shadow-sm hover:border-[#6c92c6] hover:text-[#6c92c6] transition-colors">Tailwind CSS</span>
-                <span class="px-3.5 py-1.5 bg-[#172338] border border-[#22334e] rounded text-[0.95rem] text-gray-200 font-medium shadow-sm hover:border-[#6c92c6] hover:text-[#6c92c6] transition-colors">Database Systems</span>
-                <span class="px-3.5 py-1.5 bg-[#172338] border border-[#22334e] rounded text-[0.95rem] text-gray-200 font-medium shadow-sm hover:border-[#6c92c6] hover:text-[#6c92c6] transition-colors">Git & GitHub</span>
+            <div class="skills-list">
+                <span class="skill-badge">HTML</span>
+                <span class="skill-badge">CSS</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Tailwind CSS</span>
+                <span class="skill-badge">Database Systems</span>
+                <span class="skill-badge">Git &amp; GitHub</span>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="border-t border-[#22334e] py-10 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 md:gap-10 scroll-mt-16">
-            <div>
-                <p class="text-xs font-bold tracking-[0.08em] text-[#6c92c6] uppercase">Selected Works</p>
-                <h2 class="text-2xl font-bold text-white mt-1">Projects</h2>
+        <section id="projects" class="section">
+            <div class="section-sidebar">
+                <p class="section-kicker">Selected Works</p>
+                <h2 class="section-title">Projects</h2>
             </div>
-            <div class="space-y-4">
-                <div class="bg-[#172338] p-5 rounded-lg border border-[#22334e] shadow-sm hover:border-[#6c92c6] transition-colors">
-                    <h3 class="text-lg font-bold text-white mb-1.5">Network Engineer At An Nahl Islamic School</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Bertanggung jawab atas pengelolaan infrastruktur jaringan komputer di An Nahl Islamic School, termasuk konfigurasi routing jaringan dan optimasi manajemen bandwidth (queue) guna memastikan distribusi koneksi yang stabil dan efisien.</p>
+            <div class="projects-list">
+                <div class="project-card">
+                    <h3 class="project-title">Network Engineer At An Nahl Islamic School</h3>
+                    <p class="project-desc">Bertanggung jawab atas pengelolaan infrastruktur jaringan komputer di An Nahl Islamic School, termasuk konfigurasi routing jaringan dan optimasi manajemen bandwidth (queue) guna memastikan distribusi koneksi yang stabil dan efisien.</p>
                 </div>
-                <div class="bg-[#172338] p-5 rounded-lg border border-[#22334e] shadow-sm hover:border-[#6c92c6] transition-colors">
-                    <h3 class="text-lg font-bold text-white mb-1.5">Interactive Web Development Showcase</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Pembangunan antarmuka web responsif berbasis semantic HTML5 dan Tailwind CSS yang dirancang sesuai prinsip-prinsip desain modern dan modular.</p>
+                <div class="project-card">
+                    <h3 class="project-title">Interactive Web Development Showcase</h3>
+                    <p class="project-desc">Pembangunan antarmuka web responsif berbasis semantic HTML5 dan Tailwind CSS yang dirancang sesuai prinsip-prinsip desain modern dan modular.</p>
                 </div>
-                <div class="bg-[#172338] p-5 rounded-lg border border-[#22334e] shadow-sm hover:border-[#6c92c6] transition-colors">
-                    <h3 class="text-lg font-bold text-white mb-1.5">Personal Portfolio Website</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Website portofolio pribadi modern untuk mendokumentasikan keahlian, proyek teknologi, dan kanal komunikasi secara profesional.</p>
+                <div class="project-card">
+                    <h3 class="project-title">Personal Portfolio Website</h3>
+                    <p class="project-desc">Website portofolio pribadi modern untuk mendokumentasikan keahlian, proyek teknologi, dan kanal komunikasi secara profesional.</p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="border-t border-[#22334e] py-10 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 md:gap-10 scroll-mt-16">
-            <div>
-                <p class="text-xs font-bold tracking-[0.08em] text-[#6c92c6] uppercase">Get in Touch</p>
-                <h2 class="text-2xl font-bold text-white mt-1">Contact</h2>
+        <section id="contact" class="section">
+            <div class="section-sidebar">
+                <p class="section-kicker">Get in Touch</p>
+                <h2 class="section-title">Contact</h2>
             </div>
-            <div class="space-y-3.5 text-base">
-                <p class="text-gray-300 flex items-center gap-2">
-                    <span class="font-semibold text-white min-w-[90px]">Email:</span> 
-                    <a href="mailto:ihsanmalarangeng@gmail.com" target="_blank" rel="noreferrer" class="text-[#6c92c6] hover:text-[#8cb3eb] hover:underline underline-offset-4 transition-all">ihsanmalarangeng@gmail.com</a>
+            <div class="contact-list">
+                <p class="contact-item">
+                    <span class="contact-label">Email:</span> 
+                    <a href="mailto:ihsanmalarangeng@gmail.com" target="_blank" rel="noreferrer" class="contact-link">ihsanmalarangeng@gmail.com</a>
                 </p>
-                <p class="text-gray-300 flex items-center gap-2">
-                    <span class="font-semibold text-white min-w-[90px]">WhatsApp:</span> 
-                    <a href="https://wa.me/6285814953247" target="_blank" rel="noreferrer" class="text-[#6c92c6] hover:text-[#8cb3eb] hover:underline underline-offset-4 transition-all">+62 858-1495-3247</a>
+                <p class="contact-item">
+                    <span class="contact-label">WhatsApp:</span> 
+                    <a href="https://wa.me/6285814953247" target="_blank" rel="noreferrer" class="contact-link">+62 858-1495-3247</a>
                 </p>
-                <p class="text-gray-300 flex items-center gap-2">
-                    <span class="font-semibold text-white min-w-[90px]">GitHub:</span> 
-                    <a href="https://github.com/Yovezevy" target="_blank" rel="noreferrer" class="text-[#6c92c6] hover:text-[#8cb3eb] hover:underline underline-offset-4 transition-all">https://github.com/Yovezevy</a>
+                <p class="contact-item">
+                    <span class="contact-label">GitHub:</span> 
+                    <a href="https://github.com/Yovezevy" target="_blank" rel="noreferrer" class="contact-link">https://github.com/Yovezevy</a>
                 </p>
             </div>
         </section>
     </main>
 
-    <footer class="border-t border-[#22334e] py-8 text-center text-sm text-gray-400">
+    <footer class="footer">
         <p>&copy; 2026 Muhammad Ihsan Malarangeng. All rights reserved.</p>
     </footer>
 </body>
